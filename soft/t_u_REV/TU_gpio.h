@@ -11,28 +11,38 @@
 #define TR1 0
 #define TR2 1 // reset
 
-// outputs, tact buttons:
-#ifdef _TEMPS_UTILE_REV_0
-  #define CLK1 29
-  #define CLK2 28
-  #define CLK3 10
-  #define CLK4 A14
-  #define CLK5 2
-  #define CLK6 9
+#ifdef FLIP_180 //swap the buttons and encoders
+  #define but_top 12
+  #define but_bot 3
   
-  #define but_top 5
-  #define but_bot 4 
+  #define encR1 22
+  #define encR2 21
+  #define butR  23
+  
+  #define encL1 15
+  #define encL2 16
+  #define butL  13
 #else
+  #define but_top 3
+  #define but_bot 12
+  
+  #define encR1 15
+  #define encR2 16
+  #define butR  13
+  
+  #define encL1 22
+  #define encL2 21
+  #define butL  23
+#endif
+  
+
   #define CLK1 5
   #define CLK2 6
   #define CLK3 7
   #define CLK4 A14 // DAC channel; alt = 29
   #define CLK5 8
   #define CLK6 2
-  
-  #define but_top 3
-  #define but_bot 12
-#endif
+
 
 // OLED com: 
 #ifdef _TEMPS_UTILE_REV_0
@@ -49,13 +59,6 @@
 #define OLED_CS_ACTIVE LOW
 #define OLED_CS_INACTIVE HIGH
 
-#define encR1 15
-#define encR2 16
-#define butR  13
-
-#define encL1 22
-#define encL2 21
-#define butL  23
 
 #define TU_GPIO_DEBUG_PIN1 30
 #define TU_GPIO_DEBUG_PIN2 29 // available on PCB

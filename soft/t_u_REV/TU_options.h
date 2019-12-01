@@ -9,5 +9,8 @@
 //#define _TEMPS_UTILE_REV_0
 /* ------------ Northern Light 4U Model 2TT -----------------------------------  */
 //#define MODEL_2TT
-
+/* ------------ flip screen / IO mapping ------------------------------------------------------------  */
+#define FLIP_180
+/* ------------ invert screen pixels ----------------------------------------------------------------  */
+//#define INVERT_DISPLAY
 #endif

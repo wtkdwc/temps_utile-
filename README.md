@@ -1,3 +1,6 @@
+﻿added quick and dirty inverted display option, same as in o_c
+
+
 temps_utile-
 ============
 
